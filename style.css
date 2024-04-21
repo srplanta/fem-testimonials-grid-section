@@ -1,0 +1,127 @@
+@font-face {
+    font-family: barlow-semi-condensed-regular;
+    src: url(./fonts/BarlowSemiCondensed-Regular.ttf);
+}
+
+:root {
+    --voilet: hsl(263, 55%, 52%);
+    --very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --very-dark-blakish-blue: hsl(219, 29%, 14%);
+    --white: hsl(0, 0%, 100%);
+    --off-white: hsl(0, 0%, 60%);
+    --light-gray: hsl(0, 0%, 81%);
+    --light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+body {
+    padding: 0;
+    /* margin: 0; */
+    font-family: barlow-semi-condensed-regular;
+    font-size: 13px;
+    /* width: 100vw; */
+    background-color: var(--light-grayish-blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: space-around; */
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: column;
+    /* margin: auto; */
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.card {
+    color: var(--white);
+    padding: 1rem;
+    border-radius: .5rem;
+}
+
+.card-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+.blogger-image {
+    border-radius: 50%;
+}
+
+.name {
+    margin-bottom: 0;
+}
+
+.position {
+    margin-top: 0;
+    opacity: 50%;
+}
+
+.lead {
+    font-size: 1.5rem;
+}
+.story{
+    opacity: 70%;
+}
+
+.Daniel-card {
+    background-color: var(--voilet);
+}
+
+.Jonathan-card {
+    background-color: var(--very-dark-grayish-blue);
+}
+
+.Jeanette-card {
+    color: var(--very-dark-blakish-blue);
+    background-color: var(--white);
+}
+
+.Patrick-card {
+    color: var(--white);
+    background-color: var(--very-dark-blakish-blue);
+}
+.Kira-card {
+    color: var(--very-dark-blakish-blue);
+    background-color: var(--white);
+}
+.img-border{
+    border: 3px solid var(--off-white);
+}
+
+/* ------------------------ */
+@media only screen and (min-width:768px) {
+    .cards-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: "Daniel Daniel Jonathan Kira"
+            "Jeanette Patrick Patrick Kira";
+        gap: 1rem;
+        width: 70%;
+        /* height: 100vh; */
+    }
+
+    .Daniel-card {
+        grid-area: Daniel;
+    }
+
+    .Jonathan-card {
+        grid-area: Jonathan;
+    }
+
+    .Kira-card {
+        grid-area: Kira;
+    }
+
+    .Jeanette-card {
+        grid-area: Jeanette;
+    }
+
+    .Patrick-card {
+        grid-area: Patrick;
+    }
+}
